@@ -1,0 +1,281 @@
+.user-details-heading {
+  margin-top: 5px;
+  text-align: left;
+  margin-bottom: 12px;
+  color: #73756d;
+
+}
+
+.user-details-box {
+  background-color: #cdd0c0;
+  border-radius: 0;
+  padding: 40px;
+  max-width: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*-----------------------------------------Arrows------------------------------------*/
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 23px;
+  margin-left:5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color:#434141;;
+
+  &:hover {
+    color:  #97b716;
+  }
+
+  &.up-arrow {
+    transform: rotate(180deg);
+  }
+
+  &.down-arrow {
+    transform: rotate(0deg);
+  }
+}
+
+
+/*-----------------------------------------Edit Mode---------------------------------*/
+.user-details-edit-container {
+  width: 100%;
+}
+
+.user-details-edit-row {
+  display: flex;
+  flex-wrap: wrap; 
+  margin-bottom: 5px;
+}
+
+.user-details-input-wrapper {
+  flex: 0 0 calc(33.33% - 40px); 
+  margin-right: 40px;
+  margin-bottom: 10px;
+}
+
+
+
+.user-details-label {
+  flex: 1;
+  margin-left: 5px; 
+  font-size: 18px;
+}
+  
+.user-details-input {
+  flex: 2;
+  width: 100%;
+  padding: 10px;
+  box-sizing: content-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  }
+
+  .password-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+ /*------------------------------------Display Mode-----------------------*/ 
+
+.user-details-display-row {
+  display: flex;
+  flex-wrap: wrap; 
+  margin-top: 5px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding:10px;
+}
+
+.user-details-wrapper{
+  flex:1;
+  flex-wrap: wrap; 
+  align-items: center;
+  font-size: 20px;
+}
+
+.user-details-label{
+  flex:1;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.hidden-password {
+  flex: 1 1 60%; 
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 5px;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+
+ /*-----------------------------------Buttons-----------------------------------*/
+ .button-container-edit {
+  display: flex;
+  margin-top: 30px; 
+}
+
+.cancel-button{background-color:#434141; 
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 35px;
+  border: 0px;
+  margin-left: 10px;}
+ 
+ .save-button {
+    background-color: #97b716;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 35px;
+    border: 0px solid;
+  }
+  
+  .save-button:hover {
+    background-color: #7d9215e0;
+  }
+
+  .edit-button {
+    background-color: #97b716;
+    color: #ffffff;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 40px;
+    border: 0px solid #97b716;
+    }
+
+    .edit-button:hover {
+      background-color: #7d9215e0;
+    }
+
+    .cancel-button:hover{ background-color: #000000e0;}
+
+
+    .delete-button-container-edit {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 10px;
+      width: 81%;
+      
+    }
+    
+    .delete-button {
+      color: #73756d;
+      padding: 0;
+      text-align: left;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+    
+    .delete-button:hover {
+      color: red;
+    }
+    
+    .delete-button span {
+      margin-left: 8px;
+    }
+
+  
+  /*--------------------------------Icon------------------------------------------*/
+
+  .eye-icon-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    
+  }
+  
+  .eye-icon {
+    cursor: pointer;
+    padding-left: 12px;
+    margin-top:10px;
+    color:#434141;
+  }
+  
+  .eye-icon.visible {
+    color: #0077cc;
+  }
+
+  .eye-icon-edit-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 5px;
+  }
+  
+  .eye-icon-edit {
+    cursor: pointer;
+    padding-left: 12px;
+    margin-top:3px;
+    color:#434141;
+  
+  }
+
+  .eye-icon-edit.visible {
+    color: #0077cc;
+  }
+
+  .edit-icon-detail {
+    color:#73756d;;
+    margin-top: 15px;
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+  }
+
+  .icon-container-edit{
+    margin-top: 5px;
+    border: none;
+  }
+
+  .edit-icon-detail svg {
+    margin-right: 7px; 
+  }
+
+  .edit-icon-detail:hover {
+    color:#7d9215e0;
+  }
+
+  /*--------------------------------Error Message-----------------------------------*/
+
+  .error-message {
+    color: red;
+    padding: 10px;
+  }
+  

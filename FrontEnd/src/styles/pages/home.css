@@ -1,0 +1,14 @@
+.create-account{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.create-account a {
+    color: #007bff; 
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .create-account a:hover {
+    text-decoration: underline;
+  }

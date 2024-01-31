@@ -1,0 +1,107 @@
+.new-plan-heading{
+  margin-top: 5px;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #73756d;
+}
+.new-plan-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .new-plan-modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .new-plan-modal-row{
+  display: flex;
+  flex-wrap: wrap; 
+  margin-bottom: 5px;
+  }
+
+  .new-plan-modal-second-row{display: flex;
+    flex-wrap: wrap; 
+    margin-bottom: 5px;}
+
+.pop-up-input-wrapper{
+  flex: 0 0 calc(50% - 20px); 
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.pop-up-input-wrapper-description{
+    flex: 0 0 calc(100% - 20px); 
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.label-new-plan-pop-up {
+  margin-left: 5px; 
+  font-size: 18px;
+}
+
+ .new-plan-pop-up-input {
+    flex: 2;
+    width: calc(100% - 20px);
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-top: 10px;}
+
+/*---------------------------------------Buttons-----------------------------*/
+.button-container-pop-up {
+    display: flex;
+    margin-top: 10px; 
+}
+
+.button-add-plan-pop-up{background-color: #97b716;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 35px;
+    border: 0px solid;}
+
+    .button-add-plan-pop-up:hover {
+        background-color: #7d9215e0;
+      }
+
+.button-canscel-plan-pop-up{
+    background-color:#434141; 
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 35px;
+  border: 0px;
+  margin-left: 10px;
+}
+
+.button-canscel-plan-pop-up:hover{
+    background-color: #000000e0;
+}
+
+/*-------------------------------------------Errors----------------------*/
+.error-message {
+  color: red;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }

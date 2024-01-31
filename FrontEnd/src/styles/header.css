@@ -1,0 +1,47 @@
+
+header {
+    background-color: #333; 
+    color: #fff; 
+    padding: 30px; 
+    text-align: left; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    margin: 0; 
+  }
+
+  .header-link {
+    text-decoration: none;
+    color: #858585;
+  }
+  
+  .header-link:hover {
+    color: #555; 
+  }
+
+  nav ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li {
+    color: #97b716; 
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #97b716; 
+  }
+
+  nav ul li a:hover {
+    font-weight: bold; 
+  }
+
+ 
+
+  
