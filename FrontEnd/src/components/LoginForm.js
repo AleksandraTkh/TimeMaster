@@ -31,7 +31,7 @@ const LoginForm = ({ onLogin }) => {
         const user = await response.json();
 
         setLoggedInUser(user);
-        localStorage.setItem("currentUserId", user.user_id);
+        sessionStorage.setItem("currentUserId", user.user_id);
         onLogin(user);
         navigate("/userDetailsPage", { replace: true });
       } else {

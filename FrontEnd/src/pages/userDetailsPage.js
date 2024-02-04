@@ -14,7 +14,7 @@ const UserDetailsPage = () => {
   const navigate = useNavigate();
 
   //Retrieve CurrentUserId from Local Storage
-  const currentUserId = localStorage.getItem("currentUserId");
+  const currentUserId = sessionStorage.getItem("currentUserId");
   const [userDetailsData, setUserDetailsData] = useState(null);
 
   //Set Edit Mode: Default false - Edit Window is Closed
