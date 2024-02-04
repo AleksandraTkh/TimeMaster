@@ -184,14 +184,16 @@ const UserPlans = ({ currentUserId }) => {
   };
 
   //Group User Plan into Arrays based on Its Date
-  const groupedPlans = userPlans.reduce((acc, plan) => {
-    const date = plan.date;
-    if (!acc[date]) {
-      acc[date] = [];
-    }
-    acc[date].push(plan);
-    return acc;
-  }, {});
+  const groupedPlans = Array.isArray(userPlans)
+    ? userPlans.reduce((acc, plan) => {
+        const date = plan.date;
+        if (!acc[date]) {
+          acc[date] = [];
+        }
+        acc[date].push(plan);
+        return acc;
+      }, {})
+    : {};
 
   // Sort dates in acc order, where Key is a Date of a Plan and Value is an Array of Plans
   const sortedDates = Object.keys(groupedPlans).sort(
@@ -239,6 +241,8 @@ const UserPlans = ({ currentUserId }) => {
 
         <div className="horizontal-date-groups">
           {sortedDates.map((date) => {
+            const key = date ? date.toString() : "undefinedKey";
+
             const dateGroup = groupedPlans[date];
             const sortedPlans = dateGroup.sort((a, b) => {
               const startTimeSort =
@@ -246,13 +250,15 @@ const UserPlans = ({ currentUserId }) => {
               return startTimeSort;
             });
 
+            console.log("Date Group Key:", dateGroup[0].date);
+
             return (
-              <div key={dateGroup[0].date} className="date-group">
+              <div key={key} className="date-group">
                 <h3 className="plan-date-heading">
                   {new Date(dateGroup[0].date).toLocaleDateString()}
                 </h3>
                 {sortedPlans.map((userPlan) => (
-                  <div key={userPlan.plan_id}>
+                  <div key={userPlan.plan_id} className="plan-details-wrapper">
                     {editMode === userPlan.plan_id ? (
                       <div className="plan-details-edit-container">
                         <div className="third-row-wrapper-edit">
@@ -362,6 +368,7 @@ const UserPlans = ({ currentUserId }) => {
                             <FontAwesomeIcon icon={faEdit} />
                           </button>
                           <button
+                            data-testid={`delete-plan-${userPlan.plan_id}`}
                             className="delete-icon-plan"
                             onClick={() => handleDelete(userPlan.plan_id)}
                           >
